@@ -1,9 +1,4 @@
 ///////////////////////////////////////////////////////////
-// <DodgerSky> skin created by OmegaExtern.
-// Editted by Gaerisson.
-// Originally written for Garry's Mod game.
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
 // Tracker scheme resource file
 //
 // sections:
@@ -21,23 +16,31 @@ Scheme
 	Colors
 	{
 		// base colors
-		"White"				"255 255 255 255"
-		"OffWhite"			"221 221 221 255"
-		"DullWhite"			"190 190 190 255"
-		"Orange"			"255 155 0 255"
-		"TransparentBlack"	"0 0 0 128"
-		"Black"				"0 0 0 255"
+		"White"				"235 219 178 255"  // Gruvbox fg
+		"OffWhite"			"213 196 161 255"  // Gruvbox fg2
+		"DullWhite"			"189 174 147 255"  // Gruvbox fg3
+		"Orange"			"254 128 25 255"   // Gruvbox bright orange
+		"TransparentBlack"	"40 40 40 128"     // Gruvbox bg with alpha
+		"Black"				"40 40 40 255"     // Gruvbox bg
 
 		"Blank"				"0 0 0 0"
 
-		"GMod_BG_Opaque"	"40 40 40 250"
-		"GMod_BG"			"108 111 114 0" // SRCDS cannot do transparency, so we gotta replace Blank with this.
-		"GMod_WhiteBlank"	"255 255 255 0"
+		"GMod_BG_Opaque"	"40 40 40 250"     // Gruvbox bg
+		"GMod_BG"			"40 40 40 0"       // SRCDS cannot do transparency, so we gotta replace Blank with this.
+		"GMod_WhiteBlank"	"235 219 178 0"    // Gruvbox fg with alpha
 
-		"SteamLightGreen"			"157 194 80 255"
-		"AchievementsLightGrey"		"79 79 79 255"
-		"AchievementsDarkGrey"		"55 55 55 255"
-		"AchievementsInactiveFG"	"130 130 130 255"
+		"SteamLightGreen"			"152 151 26 255"   // Gruvbox green
+		"AchievementsLightGrey"		"146 131 116 255"  // Gruvbox gray
+		"AchievementsDarkGrey"		"102 92 84 255"    // Gruvbox dark gray
+		"AchievementsInactiveFG"	"168 153 132 255"  // Gruvbox fg4
+		
+		// Gruvbox specific colors
+		"GruvRed"			"204 36 29 255"    // Gruvbox red
+		"GruvGreen"			"152 151 26 255"   // Gruvbox green
+		"GruvYellow"		"215 153 33 255"   // Gruvbox yellow
+		"GruvBlue"			"69 133 136 255"   // Gruvbox blue
+		"GruvPurple"		"177 98 134 255"   // Gruvbox purple
+		"GruvAqua"			"104 157 106 255"  // Gruvbox aqua
 	}
 
 	///////////////////// BASE SETTINGS ////////////////////////
@@ -47,35 +50,35 @@ Scheme
 	BaseSettings
 	{
 		// vgui_controls color specifications
-		Border.Bright					"17 17 17 255"	// the lit side of a control
-		Border.Dark						"17 17 17 255"		// the dark/unlit side of a control
-		Border.Selection				"54 54 54 255"			// the additional border color for displaying the default/selected button
-		Border.DarkSolid				"17 17 17 255"
-		Border.Subtle					"17 17 17 255"
+		Border.Bright					"168 153 132 255"	// the lit side of a control - Gruvbox fg4
+		Border.Dark						"60 56 54 198"		// the dark/unlit side of a control - Gruvbox bg1
+		Border.Selection				"Black"			// the additional border color for displaying the default/selected button
+		Border.DarkSolid				"60 56 54 255"    // Gruvbox bg1
+		Border.Subtle					"80 73 69 255"    // Gruvbox bg2
 
-		Button.TextColor				"240 240 240 255"
-		Button.BgColor					"45 45 48 50"
-		Button.ArmedTextColor			"0 122 204 255"
-		Button.ArmedBgColor				"62 62 64 255"	[$WIN32]
-		Button.ArmedBgColor				"62 62 64 255"		[$X360]
-		Button.DepressedTextColor		"18 18 18 255"
-		Button.DepressedBgColor			"0 122 204 255"
-		Button.FocusBorderColor			"Blank"
+		Button.TextColor				"102 92 84 255"   // Gruvbox dark gray
+		Button.BgColor					"189 174 147 255"  // Gruvbox fg3
+		Button.ArmedTextColor			"69 133 136 255"   // Gruvbox blue
+		Button.ArmedBgColor				"213 196 161 255"	[$WIN32] // Gruvbox fg2
+		Button.ArmedBgColor				"215 153 33 255"		[$X360] // Gruvbox yellow
+		Button.DepressedTextColor		"White"
+		Button.DepressedBgColor			"69 133 136 255"    // Gruvbox blue
+		Button.FocusBorderColor			"102 92 84 255"     // Gruvbox dark gray
 
-		CheckButton.TextColor			"240 240 240 255"
-		CheckButton.SelectedTextColor	"190 190 190 255"
-		CheckButton.BgColor				"30 30 32 50"
+		CheckButton.TextColor			"White"
+		CheckButton.SelectedTextColor	"White"
+		CheckButton.BgColor				"White"
 		CheckButton.Border1				"Border.Subtle" 		// the left checkbutton border
 		CheckButton.Border2				"Border.Subtle"		// the right checkbutton border
-		CheckButton.Check				"60 60 62 255" // color of the check itself
+		CheckButton.Check				"Black"	// color of the check itself
 		CheckButton.DisabledFgColor		"Black"	// color of the check itself when disabled
-		CheckButton.HighlightFgColor	"0 122 204 255"
+		CheckButton.HighlightFgColor	"OffWhite"
 		CheckButton.ArmedBgColor		"Blank"
 		CheckButton.DepressedBgColor	"Blank"
-		CheckButton.DisabledBgColor		"180 180 180 255"
+		CheckButton.DisabledBgColor		"146 131 116 255"    // Gruvbox gray
 
-		ComboBoxButton.ArrowColor		"0 122 204 255"
-		ComboBoxButton.ArmedArrowColor	"0 60 255 255"
+		ComboBoxButton.ArrowColor		"102 92 84 255"      // Gruvbox dark gray
+		ComboBoxButton.ArmedArrowColor	"124 111 100 255"    // Gruvbox lighter dark
 		ComboBoxButton.BgColor			"GMod_WhiteBlank"
 		ComboBoxButton.DisabledBgColor	"GMod_WhiteBlank"
 
@@ -83,120 +86,119 @@ Scheme
 		Frame.ClientInsetX				8
 		Frame.ClientInsetY				6
 		Frame.BgColor					"GMod_BG_Opaque"	[$WIN32]
-		Frame.BgColor					"50 50 50 250"		[$X360]
-		Frame.OutOfFocusBgColor			"25 25 25 240"	[$WIN32]
-		Frame.OutOfFocusBgColor			"25 25 25 192"		[$X360]
+		Frame.BgColor					"80 73 69 192"		[$X360] // Gruvbox bg2
+		Frame.OutOfFocusBgColor			"60 56 54 240"	[$WIN32] // Gruvbox bg1
+		Frame.OutOfFocusBgColor			"80 73 69 192"		[$X360] // Gruvbox bg2
 		Frame.FocusTransitionEffectTime	"0.3"							// time it takes for a window to fade in/out on focus/out of focus
 		Frame.TransitionEffectTime		"0.3"				[$WIN32]	// time it takes for a window to fade in/out on open/close
 		Frame.TransitionEffectTime		"0.2"				[$X360]		// time it takes for a window to fade in/out on open/close
 		Frame.AutoSnapRange				"0"
-		FrameGrip.Color1				"40 40 42 255"
-		FrameGrip.Color2				"40 40 42 255"
-		FrameTitleButton.FgColor		"255 0 0 204"
+		FrameGrip.Color1				"168 153 132 196"  // Gruvbox fg4
+		FrameGrip.Color2				"40 40 40 196"     // Gruvbox bg
+		FrameTitleButton.FgColor		"168 153 132 196"  // Gruvbox fg4
 		FrameTitleButton.BgColor		"GMod_BG"
-		FrameTitleButton.DisabledFgColor	"197 64 74 91"
+		FrameTitleButton.DisabledFgColor	"213 196 161 192" // Gruvbox fg2
 		FrameTitleButton.DisabledBgColor	"GMod_BG"
 		FrameSystemButton.FgColor		"Blank"
 		FrameSystemButton.BgColor		"Blank"
 		FrameSystemButton.Icon			""
 		FrameSystemButton.DisabledIcon	""
 		FrameTitleBar.Font				"UiBold"		[$WIN32]
-		FrameTitleBar.Font				"DefaultLarge"	[$X360]
-		FrameTitleBar.TextColor			"0 122 204 204"
+		FrameTitleBar.Font				"DefaultLarge"	[$WIN32]
+		FrameTitleBar.TextColor			"235 219 178 204" // Gruvbox fg
 		FrameTitleBar.BgColor			"GMod_BG"
-		FrameTitleBar.DisabledTextColor	"0 122 204 91"
+		FrameTitleBar.DisabledTextColor	"213 196 161 91" // Gruvbox fg2
 		FrameTitleBar.DisabledBgColor	"GMod_BG"
 
-		GraphPanel.FgColor				"0 122 204 255"
-		GraphPanel.BgColor				"17 17 17 150"
+		GraphPanel.FgColor				"White"
+		GraphPanel.BgColor				"TransparentBlack"
 
-		Label.TextDullColor				"190 190 190 255"
-		Label.TextColor					"190 190 190 255"
-		Label.TextBrightColor			"240 240 240 255"
-		Label.SelectedTextColor			"210 210 210 255"
+		Label.TextDullColor				"DullWhite"
+		Label.TextColor					"OffWhite"
+		Label.TextBrightColor			"White"
+		Label.SelectedTextColor			"White"
 		Label.BgColor					"GMod_BG"
-		Label.DisabledFgColor1			"90 90 90 255"
-		Label.DisabledFgColor2			"85 85 85 245"
+		Label.DisabledFgColor1			"124 111 100 255" // Gruvbox lighter dark
+		Label.DisabledFgColor2			"60 56 54 255"    // Gruvbox bg1
 
-		ListPanel.TextColor					"240 240 240 255"
+		ListPanel.TextColor					"Black"
 		ListPanel.TextBgColor				"Blank"
-		ListPanel.BgColor					"12 12 12 50"
-		ListPanel.SelectedTextColor			"0 122 204 255"
-		ListPanel.SelectedBgColor			"50 50 50 204"
+		ListPanel.BgColor					"White"
+		ListPanel.SelectedTextColor			"White"
+		ListPanel.SelectedBgColor			"69 133 136 204" // Gruvbox blue
 		ListPanel.OutOfFocusSelectedTextColor	"Black"
-		ListPanel.SelectedOutOfFocusBgColor		"132 183 241 100"
+		ListPanel.OutOfFocusSelectedBgColor		"104 157 106 100" // Gruvbox aqua
 		ListPanel.EmptyListInfoTextColor	"Black"
 
-		Menu.TextColor					"240 240 240 255"
-		Menu.BgColor					"25 25 28 50"
-		Menu.ArmedTextColor				"0 122 204 255"
-		Menu.ArmedBgColor				"40 40 42 255"
+		Menu.TextColor					"102 92 84 255"  // Gruvbox dark gray
+		Menu.BgColor					"213 196 161 255" // Gruvbox fg2
+		Menu.ArmedTextColor				"White"
+		Menu.ArmedBgColor				"104 157 106 255" // Gruvbox aqua
 		Menu.TextInset					"6"
 
 		Panel.FgColor					"DullWhite"
 		Panel.BgColor					"GMod_BG"
 
-		ProgressBar.FgColor				"0 122 204 255"
-		ProgressBar.BgColor				"12 12 12 50"
+		ProgressBar.FgColor				"White"
+		ProgressBar.BgColor				"TransparentBlack"
 
-		PropertySheet.TextColor				"240 240 240 240"
-		PropertySheet.SelectedTextColor		"White"
-		PropertySheet.SelectedBgColor		"60 60 60 255"
+		PropertySheet.TextColor				"60 56 54 200"  // Gruvbox bg1
+		PropertySheet.SelectedTextColor		"60 56 54 255"  // Gruvbox bg1
+		PropertySheet.SelectedBgColor		"60 56 54 255"  // Gruvbox bg1
 		PropertySheet.TransitionEffectTime	"0.25"	// time to change from one tab to another
-		PropertySheet.BgColor				"37 37 37 50"
+		PropertySheet.BgColor				"Black"
 
-		RadioButton.TextColor			"240 240 240 240"
-		RadioButton.SelectedTextColor	"0 122 204 255"
+		RadioButton.TextColor			"OffWhite"
+		RadioButton.SelectedTextColor	"White"
 
-		// Console
-		RichText.TextColor				"210 210 210 255"
-		RichText.BgColor				"12 12 12 150"
-		RichText.SelectedTextColor		"0 122 204 255"
-		RichText.SelectedBgColor		"20 20 20 150"
+		RichText.TextColor				"OffWhite"
+		RichText.BgColor				"TransparentBlack"
+		RichText.SelectedTextColor		"White"
+		RichText.SelectedBgColor		"69 133 136 204" // Gruvbox blue
 
 		ScrollBar.Wide					15
 
-		ScrollBarButton.FgColor				"Button.FgColor"
-		ScrollBarButton.BgColor				"Button.BgColor"
-		ScrollBarButton.ArmedFgColor		"Button.ArmedFgColor"
-		ScrollBarButton.ArmedBgColor		"Button.ArmedBgColor"
-		ScrollBarButton.DepressedFgColor	"Button.DepressedFgColor"
-		ScrollBarButton.DepressedBgColor	"Button.DepressedBgColor"
+		ScrollBarButton.FgColor				"80 73 69 255"    // Gruvbox bg2
+		ScrollBarButton.BgColor				"168 153 132 255" // Gruvbox fg4
+		ScrollBarButton.ArmedFgColor		"40 40 40 255"    // Gruvbox bg
+		ScrollBarButton.ArmedBgColor		"189 174 147 255" // Gruvbox fg3
+		ScrollBarButton.DepressedFgColor	"69 133 136 255"  // Gruvbox blue
+		ScrollBarButton.DepressedBgColor	"104 157 106 255" // Gruvbox aqua
 
-		ScrollBarSlider.FgColor				"46 46 48 255"			// nob color
-		ScrollBarSlider.BgColor				"29 29 31 255"	// slider background color
+		ScrollBarSlider.FgColor				"189 174 147 255" // Gruvbox fg3
+		ScrollBarSlider.BgColor				"146 131 116 229" // Gruvbox gray
 
-		SectionedListPanel.HeaderTextColor	"0 122 204 255"
+		SectionedListPanel.HeaderTextColor	"60 56 54 255"   // Gruvbox bg1
 		SectionedListPanel.HeaderBgColor	"Blank"
-		SectionedListPanel.DividerColor		"0 0 0 150"
-		SectionedListPanel.TextColor		"Button.FgColor"
-		SectionedListPanel.BrightTextColor	"White"
-		SectionedListPanel.BgColor			"17 17 17 50"
-		SectionedListPanel.SelectedTextColor			"18 18 18 255"
-		SectionedListPanel.SelectedBgColor				"0 122 204 50"
-		SectionedListPanel.OutOfFocusSelectedTextColor	"18 18 18 230"
-		SectionedListPanel.OutOfFocusSelectedBgColor	"0 122 204 60"
+		SectionedListPanel.DividerColor		"40 40 40 150"   // Gruvbox bg
+		SectionedListPanel.TextColor		"60 56 54 255"   // Gruvbox bg1
+		SectionedListPanel.BrightTextColor	"80 73 69 255"   // Gruvbox bg2
+		SectionedListPanel.BgColor			"White"
+		SectionedListPanel.SelectedTextColor			"White"
+		SectionedListPanel.SelectedBgColor				"69 133 136 204" // Gruvbox blue
+		SectionedListPanel.OutOfFocusSelectedTextColor	"Black"
+		SectionedListPanel.OutOfFocusSelectedBgColor	"104 157 106 100" // Gruvbox aqua
 
-		Slider.NobColor				"46 46 48 255"
-		Slider.TextColor			"Label.TextColor"
-		Slider.TrackColor			"50 50 50 200"
-		Slider.DisabledTextColor1	"Label.DisabledFgColor1"
-		Slider.DisabledTextColor2	"Label.DisabledFgColor2"
+		Slider.NobColor				"189 174 147 255" // Gruvbox fg3
+		Slider.TextColor			"146 131 116 255" // Gruvbox gray
+		Slider.TrackColor			"146 131 116 229" // Gruvbox gray
+		Slider.DisabledTextColor1	"124 111 100 255" // Gruvbox lighter dark
+		Slider.DisabledTextColor2	"60 56 54 255"    // Gruvbox bg1
 
-		TextEntry.TextColor			"Label.TextColor"
-		TextEntry.BgColor			"33 33 33 50"
-		TextEntry.CursorColor		"0 122 204 240"
-		TextEntry.DisabledTextColor	"DullWhite"
-		TextEntry.DisabledBgColor	"192 192 192 50"
-		TextEntry.SelectedTextColor	"10 10 10 50"
-		TextEntry.SelectedBgColor	"SectionedListPanel.SelectedBgColor"
-		TextEntry.OutOfFocusSelectedBgColor	"SectionedListPanel.OutOfFocusSelectedBgColor"
-		TextEntry.FocusEdgeColor	"TransparentBlack"
+		TextEntry.TextColor			"60 56 54 255"    // Gruvbox bg1
+		TextEntry.BgColor			"White"
+		TextEntry.CursorColor		"60 56 54 255"    // Gruvbox bg1
+		TextEntry.DisabledTextColor	"124 111 100 255" // Gruvbox lighter dark
+		TextEntry.DisabledBgColor	"146 131 116 255" // Gruvbox gray
+		TextEntry.SelectedTextColor	"60 56 54 255"    // Gruvbox bg1
+		TextEntry.SelectedBgColor	"69 133 136 204"  // Gruvbox blue
+		TextEntry.OutOfFocusSelectedBgColor	"104 157 106 100" // Gruvbox aqua
+		TextEntry.FocusEdgeColor	"40 40 40 196"    // Gruvbox bg
 
 		ToggleButton.SelectedTextColor	"White"
 
-		Tooltip.TextColor			"Menu.ArmedTextColor"
-		Tooltip.BgColor				"Menu.ArmedBgColor"
+		Tooltip.TextColor			"215 153 33 255"  // Gruvbox yellow
+		Tooltip.BgColor				"40 40 40 255"    // Gruvbox bg
 
 		TreeView.BgColor			"TransparentBlack"
 
@@ -204,15 +206,15 @@ Scheme
 
 		// scheme-specific colors
 		MainMenu.TextColor			"White"				[$WIN32]
-		MainMenu.TextColor			"200 200 200 255"	[$X360]
-		MainMenu.ArmedTextColor		"200 200 200 255"	[$WIN32]
+		MainMenu.TextColor			"168 153 132 255"	[$X360] // Gruvbox fg4
+		MainMenu.ArmedTextColor		"168 153 132 255"	[$WIN32] // Gruvbox fg4
 		MainMenu.ArmedTextColor		"White"				[$X360]
-		MainMenu.DepressedTextColor	"192 186 80 255"
+		MainMenu.DepressedTextColor	"215 153 33 255"    // Gruvbox yellow
 		MainMenu.MenuItemHeight		"30"				[$WIN32]
 		MainMenu.MenuItemHeight			"22"				[$X360]
 		MainMenu.MenuItemHeight_hidef	"32"				[$X360]
 		MainMenu.Inset				"32"
-		MainMenu.Backdrop			"0 0 0 156"
+		MainMenu.Backdrop			"40 40 40 156"     // Gruvbox bg
 
 		Console.TextColor			"OffWhite"
 		Console.DevTextColor		"White"
@@ -221,13 +223,13 @@ Scheme
 		NewGame.FillColor			"Black"
 		NewGame.SelectionColor		"Orange"	[$WIN32]
 		NewGame.SelectionColor		"Black"		[$X360]
-		NewGame.DisabledColor		"128 128 128 196"
+		NewGame.DisabledColor		"124 111 100 196" // Gruvbox lighter dark
 
-		MessageDialog.MatchmakingBG			"46 43 42 255"	[$X360]
-		MessageDialog.MatchmakingBGBlack			"22 22 22 255"	[$X360]
+		MessageDialog.MatchmakingBG			"60 56 54 255"	[$X360] // Gruvbox bg1
+		MessageDialog.MatchmakingBGBlack			"40 40 40 255"	[$X360] // Gruvbox bg
 
-		MatchmakingMenuItemTitleColor			"200 184 151 255"	[$X360]
-		MatchmakingMenuItemDescriptionColor		"200 184 151 255"	[$X360]
+		MatchmakingMenuItemTitleColor			"189 174 147 255"	[$X360] // Gruvbox fg3
+		MatchmakingMenuItemDescriptionColor		"189 174 147 255"	[$X360] // Gruvbox fg3
 
 		"QuickListBGDeselected"		"AchievementsDarkGrey"
 		"QuickListBGSelected"		"AchievementsLightGrey"
